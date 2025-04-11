@@ -36,12 +36,12 @@
           "z": 1.00
         },
         {
-          "config": "{\"name\":\"96d64650acdce6a98549\",\"layouts\":[{\"id\":0,\"position\":{\"x\":265.3780202650039,\"y\":113.73343725643024,\"z\":0,\"width\":808.1060015588464,\"height\":476.8823070927513,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"calendario.Data\",\"active\":true}],\"Y2\":[{\"queryRef\":\"Avg(cotacoes.Cotacao)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c1\",\"Entity\":\"calendario\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"cotacoes\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c1\"}},\"Property\":\"Data\"},\"Name\":\"calendario.Data\",\"NativeReferenceName\":\"Data\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Cotacao\"}},\"Function\":1},\"Name\":\"Avg(cotacoes.Cotacao)\",\"NativeReferenceName\":\"Average of Cotacao\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c1\"}},\"Property\":\"Data\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{}}}",
+          "config": "{\"name\":\"96d64650acdce6a98549\",\"layouts\":[{\"id\":0,\"position\":{\"x\":689.3842556508183,\"y\":26.936866718628213,\"z\":0,\"width\":562.6812159002337,\"height\":246.42244738893217,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"calendario.Data\",\"active\":true}],\"Y2\":[{\"queryRef\":\"Avg(cotacoes.Cotacao)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c1\",\"Entity\":\"calendario\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"cotacoes\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c1\"}},\"Property\":\"Data\"},\"Name\":\"calendario.Data\",\"NativeReferenceName\":\"Data\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Cotacao\"}},\"Function\":1},\"Name\":\"Avg(cotacoes.Cotacao)\",\"NativeReferenceName\":\"Average of Cotacao\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c1\"}},\"Property\":\"Data\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{}}}",
           "filters": "[]",
-          "height": 476.88,
-          "width": 808.11,
-          "x": 265.38,
-          "y": 113.73,
+          "height": 246.42,
+          "width": 562.68,
+          "x": 689.38,
+          "y": 26.94,
           "z": 0.00
         }
       ],
