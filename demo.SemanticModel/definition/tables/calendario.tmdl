@@ -10,6 +10,21 @@ table calendario
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Total R$' = ```
+			
+			SUMX(
+			    moedas,
+			    SUMX(
+			        calendario,
+			        COALESCE([Cotação corrigida], 1) * [Valor Total] 
+			    )
+			) 
+			```
+		displayFolder: Medidas
+		lineageTag: cf287ed5-3576-4a3f-bf52-8dddd877fe31
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Data
 		dataType: dateTime
 		isKey
