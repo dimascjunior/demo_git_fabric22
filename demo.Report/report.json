@@ -23,7 +23,7 @@
       "displayName": "Page 1",
       "displayOption": 1,
       "filters": "[]",
-      "height": 1080.00,
+      "height": 720.00,
       "name": "af43dab4b4b73d218561",
       "visualContainers": [
         {
@@ -45,7 +45,7 @@
           "z": 0.00
         }
       ],
-      "width": 1920.00
+      "width": 1280.00
     }
   ]
 }

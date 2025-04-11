@@ -1,0 +1,33 @@
+
+Valor Total = SUM(transacoes[Total])
+
+
+Cotação do dia = AVERAGE(cotacoes[Cotacao]) 
+
+
+Cotação corrigida = 
+
+VAR __DataCtx = MAX(calendario[Data]) 
+
+VAR __UltimaDataComCotacao = 
+    CALCULATE(
+        LASTNONBLANK(calendario[Data], [Cotação do dia]),
+        calendario[Data] <= __DataCtx
+    )
+
+RETURN
+    CALCULATE(
+        [Cotação do dia],
+        calendario[Data] = __UltimaDataComCotacao
+    )
+
+
+
+Total R$ = 
+SUMX(
+    moedas,
+    SUMX(
+        calendario,
+        COALESCE([Cotação corrigida], 1) * [Valor Total] 
+    )
+) 
