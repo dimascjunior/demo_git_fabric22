@@ -111,3 +111,29 @@ expression data_final = DateTime.Date(DateTime.LocalNow())
 
 	annotation PBI_ResultType = Date
 
+expression 'base_transacoes (2)' = "C:\Users\dimas.junior\Downloads\transacoes.xlsx" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: b8c890dc-2a86-4951-b79a-6839752d88f8
+	queryGroup: Fatos
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
+expression 'data_inicial (2)' = #date(2024, 11, 1) meta [IsParameterQuery=true, Type="Date", IsParameterQueryRequired=true]
+	lineageTag: f49b5cdf-9fe2-49d4-876a-74e2164dc991
+	queryGroup: Fatos
+
+	annotation PBI_ResultType = Date
+
+expression 'data_final (2)' =
+		let
+		    Source = DateTime.Date(DateTime.LocalNow())
+		in
+		    Source
+	lineageTag: 7f34f490-eb8e-49da-b5b9-15c7706ab468
+	queryGroup: Fatos
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Date
+

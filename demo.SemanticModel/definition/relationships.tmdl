@@ -14,3 +14,7 @@ relationship e8bac979-5f3f-bab6-9419-cc2e32347af8
 	fromColumn: transacoes.Data
 	toColumn: calendario.Data
 
+relationship AutoDetected_187aa4b0-0745-4c67-a2e2-1d0790d00a0d
+	fromColumn: 'transacoes (2)'.Moeda
+	toColumn: moedas.Moeda
+

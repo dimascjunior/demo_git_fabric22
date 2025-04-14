@@ -1,0 +1,65 @@
+table 'transacoes (2)'
+	lineageTag: 040d3710-4f3d-4bd7-9dae-abe8f14e3b54
+
+	column ID
+		dataType: double
+		lineageTag: 46816dcc-502d-4a75-b843-ad8771db9aa5
+		summarizeBy: count
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Data
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 41256626-72ec-4607-8eb9-1d1cd2d58a91
+		summarizeBy: none
+		sourceColumn: Data
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Total
+		dataType: double
+		lineageTag: 0dcfcc24-6f94-4b17-9bea-4ecb17d2df41
+		summarizeBy: sum
+		sourceColumn: Total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Moeda
+		dataType: string
+		lineageTag: 4120e1a2-c709-49db-a75d-09968c023047
+		summarizeBy: none
+		sourceColumn: Moeda
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'transacoes (2)' = m
+		mode: import
+		queryGroup: Fatos
+		source = ```
+				let
+				    source = Excel.Workbook(
+				        File.Contents(#"base_transacoes (2)"), 
+				        true, 
+				        null
+				    ),
+				    
+				    transacoes_Table = source{[Item="transacoes",Kind="Table"]}[Data],
+				    
+				    datesRestricted = Table.SelectRows(
+				        transacoes_Table, 
+				        each [Data] >= #"data_inicial (2)" and [Data] <= #"data_final (2)"
+				    )
+				in
+				    datesRestricted
+				```
+
+	annotation PBI_ResultType = Table
+

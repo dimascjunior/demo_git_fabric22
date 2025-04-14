@@ -11,7 +11,7 @@
         {
           "location": {
             "x": 852.38305001469359,
-            "y": 25
+            "y": 26
           },
           "nodeIndex": "calendario",
           "nodeLineageTag": "a9eec310-6292-4707-a5ce-0e85b21273e9",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 617.38305001469348,
-            "y": 286
+            "y": 287
           },
           "nodeIndex": "cotacoes",
           "nodeLineageTag": "4fd2a025-9827-40ee-a038-25290f6560fb",
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 394.20156119318506,
-            "y": 2
+            "y": 3
           },
           "nodeIndex": "moedas",
           "nodeLineageTag": "5ffe7c1f-35a4-46e9-83ce-63f8ed03af1b",
@@ -50,7 +50,7 @@
         {
           "location": {
             "x": 300,
-            "y": 377
+            "y": 378
           },
           "nodeIndex": "transacoes",
           "nodeLineageTag": "0a142948-5993-4377-8edd-a62c120e1cf0",
@@ -59,6 +59,19 @@
             "width": 234
           },
           "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 836.38305001469371,
+            "y": 188.5
+          },
+          "nodeIndex": "transacoes (2)",
+          "nodeLineageTag": "040d3710-4f3d-4bd7-9dae-abe8f14e3b54",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",
